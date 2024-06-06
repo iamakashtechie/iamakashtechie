@@ -3,7 +3,7 @@
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=iamakashtechie&label=Profile%20views&color=0e75b6&style=flat" alt="iamakashtechie" />
-  <a href="https://twitter.com/iamakashtechie" target="_blank"><img src="https://img.shields.io/twitter/follow/iamakashtechie?logo=twitter&style=for-the-badge" alt="iamakashtechie" /></a>
+  <a href="https://github.com/iamakashtechie" target="_blank"><img src="https://img.shields.io/twitter/follow/iamakashtechie?logo=twitter&style=for-the-badge" alt="iamakashtechie" /></a>
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
 <p align="left">
   🌱 I’m currently learning <strong>Frontend web development</strong><br>
   👯 I’m looking to collaborate on <strong>Web development projects</strong><br>
-  📫 How to reach me <strong>akash.techie01@gmail.com</strong>
+  📫 How to reach me <a href="mailto:akash.techie01@gmail.com"><strong>akash.techie01@gmail.com</strong></a>
 </p>
 
 <h3 align="left">Connect with me:</h3>
