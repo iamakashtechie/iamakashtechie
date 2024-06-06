@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115187902/230700872-d5f44b85-56c7-4e27-80a4-6e2db901e60c.gif" width="300px" height="auto" alt="coding gif" />
+  <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/8b14f1c2-2727-41a0-bfb6-ba45beee0dc9/Group_59/w=828,quality=90,fit=scale-down" width="300px" height="auto" alt="coding gif" />
 </p>
 
 <p align="left">
