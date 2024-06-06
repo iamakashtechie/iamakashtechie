@@ -10,7 +10,7 @@
   <img src="https://user-images.githubusercontent.com/115187902/230700872-d5f44b85-56c7-4e27-80a4-6e2db901e60c.gif" width="300px" height="auto" alt="coding gif" />
 </p>
 
-<p align="center">
+<p align="left">
   🌱 I’m currently learning <strong>Frontend web development</strong><br>
   👯 I’m looking to collaborate on <strong>Web development projects</strong><br>
   📫 How to reach me <strong>akash.techie01@gmail.com</strong>
