@@ -3,8 +3,6 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=iamakashtechie&label=Profile%20views&color=0e75b6&style=flat" alt="iamakashtechie" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=iamakashtechie" alt="iamakashtechie" /></a> </p>
-
 <p align="left"> <a href="https://twitter.com/iamakashtechie" target="blank"><img src="https://img.shields.io/twitter/follow/iamakashtechie?logo=twitter&style=for-the-badge" alt="iamakashtechie" /></a> </p>
 
 - 🌱 I’m currently learning **Frontend web development**
