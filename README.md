@@ -1,9 +1,10 @@
 <h1 align="center">Hi 👋, I'm Akash Shaw</h1>
 <h3 align="center">A passionate frontend developer from India</h3>
-
+<p>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=iamakashtechie&label=Profile%20views&color=0e75b6&style=flat" alt="iamakashtechie" /> </p>
-<p align="right" height=30px> <img src="https://user-images.githubusercontent.com/115187902/230700872-d5f44b85-56c7-4e27-80a4-6e2db901e60c.gif"/> </p>
+<p align="right"> <img src="https://user-images.githubusercontent.com/115187902/230700872-d5f44b85-56c7-4e27-80a4-6e2db901e60c.gif" width="300px" height="auto" alt="coding gif"/> </p>
 <p align="left"> <a href="https://twitter.com/iamakashtechie" target="blank"><img src="https://img.shields.io/twitter/follow/iamakashtechie?logo=twitter&style=for-the-badge" alt="iamakashtechie" /></a> </p>
+</p>
 
 - 🌱 I’m currently learning **Frontend web development**
 
