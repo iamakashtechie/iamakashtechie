@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  🌱 I’m currently learning **Frontend web development**<br>
-  👯 I’m looking to collaborate on **Web development projects**<br>
-  📫 How to reach me **akash.techie01@gmail.com**
+  🌱 I’m currently learning <strong>Frontend web development</strong><br>
+  👯 I’m looking to collaborate on <strong>Web development projects</strong><br>
+  📫 How to reach me <strong>akash.techie01@gmail.com</strong>
 </p>
 
 <h3 align="left">Connect with me:</h3>
