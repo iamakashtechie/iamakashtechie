@@ -17,6 +17,10 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
@@ -35,21 +39,25 @@
         }
 
         section {
-            padding: 2rem;
+            padding: 5rem 2rem 2rem;
             text-align: center;
         }
 
         #portfolio .projects {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            overflow-x: auto;
         }
 
         #portfolio .projects div {
             margin: 1rem;
             padding: 1rem;
             border: 1px solid #ccc;
-            width: calc(33.333% - 2rem);
+            min-width: 200px;
+            transition: transform 0.2s;
+        }
+
+        #portfolio .projects div:hover {
+            transform: scale(1.1);
         }
 
         form {
@@ -72,6 +80,17 @@
             border: none;
             cursor: pointer;
         }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -84,11 +103,11 @@
             </ul>
         </nav>
     </header>
-    <section id="about">
+    <section id="about" class="fade-in">
         <h1>About Me</h1>
         <p>I'm a passionate frontend developer...</p>
     </section>
-    <section id="portfolio">
+    <section id="portfolio" class="fade-in">
         <h1>Portfolio</h1>
         <div class="projects">
             <!-- Add your projects here -->
@@ -97,7 +116,7 @@
             <div>Project 3</div>
         </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h1>Contact</h1>
         <form>
             <input type="text" placeholder="Name" required>
@@ -117,6 +136,26 @@
                 document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Add smooth fade-in effect on scroll
+        const sections = document.querySelectorAll('section');
+        const options = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
     </script>
 </body>
-  </html>
+</html>
