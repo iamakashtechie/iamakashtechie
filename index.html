@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d0d0d;
+            color: #00ff00;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #1a1a1a;
+            color: #00ff00;
             padding: 1rem 0;
             text-align: center;
             position: fixed;
@@ -26,15 +29,16 @@
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
             margin: 0 1rem;
         }
 
         nav ul li a {
-            color: #fff;
+            color: #00ff00;
             text-decoration: none;
         }
 
@@ -55,9 +59,10 @@
         #portfolio .projects div {
             margin: 1rem;
             padding: 1rem;
-            border: 1px solid #ccc;
+            border: 1px solid #00ff00;
             min-width: 200px;
             transition: transform 0.2s;
+            background-color: #1a1a1a;
         }
 
         #portfolio .projects div:hover {
@@ -75,14 +80,22 @@
             padding: 0.5rem;
             width: 100%;
             max-width: 500px;
+            background-color: #333;
+            border: 1px solid #00ff00;
+            color: #00ff00;
         }
 
         form button {
             padding: 0.5rem 1rem;
             background-color: #333;
-            color: #fff;
-            border: none;
+            color: #00ff00;
+            border: 1px solid #00ff00;
             cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #00ff00;
+            color: #333;
         }
 
         .fade-in {
@@ -103,7 +116,7 @@
         }
 
         .contact-info a {
-            color: #333;
+            color: #00ff00;
             text-decoration: none;
             margin-top: 0.5rem;
         }
@@ -115,8 +128,12 @@
         footer {
             text-align: center;
             padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
+            background-color: #1a1a1a;
+            color: #00ff00;
+        }
+
+        .icon {
+            margin-right: 0.5rem;
         }
     </style>
 </head>
@@ -124,24 +141,34 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><i class="fas fa-user icon"></i>About</a></li>
+                <li><a href="#portfolio"><i class="fas fa-briefcase icon"></i>Portfolio</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope icon"></i>Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="about" class="fade-in">
             <h1>About Me</h1>
+            <img src="https://media.giphy.com/media/3o7aD5tv1ogNBtDhDi/giphy.gif" alt="Coder GIF" style="width: 200px; border-radius: 50%;">
             <p>I'm a passionate frontend developer with experience in creating dynamic and responsive websites...</p>
         </section>
         <section id="portfolio" class="fade-in">
             <h1>Portfolio</h1>
             <div class="projects">
                 <!-- Add your projects here -->
-                <div>Project 1</div>
-                <div>Project 2</div>
-                <div>Project 3</div>
+                <div>
+                    <img src="https://via.placeholder.com/150" alt="Project 1">
+                    <p>Project 1</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150" alt="Project 2">
+                    <p>Project 2</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150" alt="Project 3">
+                    <p>Project 3</p>
+                </div>
             </div>
         </section>
         <section id="contact" class="fade-in">
@@ -154,8 +181,8 @@
             </form>
             <div class="contact-info">
                 <p>You can also find me on:</p>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github icon"></i>GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin icon"></i>LinkedIn</a>
             </div>
         </section>
     </main>
