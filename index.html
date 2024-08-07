@@ -3,27 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akash's Portfolio</title>
+    <title>Jane Doe | Frontend Developer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #007BFF;
+            --secondary-bg-color: #f4f4f4;
+            --button-bg-color: #007BFF;
+            --button-text-color: #ffffff;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --accent-color: #00ff00;
+            --secondary-bg-color: #333333;
+            --button-bg-color: #333333;
+            --button-text-color: #00ff00;
+        }
+
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #0d0d0d;
-            color: #00ff00;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         header {
-            background-color: #1a1a1a;
-            color: #00ff00;
+            background-color: var(--secondary-bg-color);
+            color: var(--text-color);
             padding: 1rem 0;
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         nav ul {
@@ -38,8 +58,19 @@
         }
 
         nav ul li a {
-            color: #00ff00;
+            color: var(--text-color);
             text-decoration: none;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
         }
 
         main {
@@ -59,10 +90,10 @@
         #portfolio .projects div {
             margin: 1rem;
             padding: 1rem;
-            border: 1px solid #00ff00;
+            border: 1px solid var(--accent-color);
             min-width: 200px;
             transition: transform 0.2s;
-            background-color: #1a1a1a;
+            background-color: var(--secondary-bg-color);
         }
 
         #portfolio .projects div:hover {
@@ -80,22 +111,23 @@
             padding: 0.5rem;
             width: 100%;
             max-width: 500px;
-            background-color: #333;
-            border: 1px solid #00ff00;
-            color: #00ff00;
+            background-color: var(--secondary-bg-color);
+            border: 1px solid var(--accent-color);
+            color: var(--text-color);
         }
 
         form button {
             padding: 0.5rem 1rem;
-            background-color: #333;
-            color: #00ff00;
-            border: 1px solid #00ff00;
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            border: none;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         form button:hover {
-            background-color: #00ff00;
-            color: #333;
+            background-color: var(--accent-color);
+            color: var(--button-text-color);
         }
 
         .fade-in {
@@ -116,7 +148,7 @@
         }
 
         .contact-info a {
-            color: #00ff00;
+            color: var(--accent-color);
             text-decoration: none;
             margin-top: 0.5rem;
         }
@@ -128,8 +160,9 @@
         footer {
             text-align: center;
             padding: 1rem 0;
-            background-color: #1a1a1a;
-            color: #00ff00;
+            background-color: var(--secondary-bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .icon {
@@ -137,7 +170,7 @@
         }
     </style>
 </head>
-<body>
+<body data-theme="light">
     <header>
         <nav>
             <ul>
@@ -146,6 +179,7 @@
                 <li><a href="#contact"><i class="fas fa-envelope icon"></i>Contact</a></li>
             </ul>
         </nav>
+        <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
     </header>
     <main>
         <section id="about" class="fade-in">
@@ -190,6 +224,13 @@
         <p>&copy; 2024 Your Name</p>
     </footer>
     <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+        }
+
         document.querySelectorAll('nav ul li a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
