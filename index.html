@@ -1,263 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akash's Portfolio</title>
+    <title>Akash - Frontend Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --accent-color: #007BFF;
-            --secondary-bg-color: #f4f4f4;
-            --button-bg-color: #007BFF;
-            --button-text-color: #ffffff;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #ffffff;
-            --accent-color: #00ff00;
-            --secondary-bg-color: #333333;
-            --button-bg-color: #333333;
-            --button-text-color: #00ff00;
+        :root {
+            --background: #1a1a1a;
+            --text: #f0f0f0;
+            --accent: #66ff99;
+        }
+        
+        .dark {
+            --background: #f0f0f0;
+            --text: #333333;
+            --accent: #ff3366;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: background-color 0.3s, color 0.3s;
+            font-family: 'Space Mono', monospace;
+            background-color: var(--background);
+            color: var(--text);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        header {
-            background-color: var(--secondary-bg-color);
-            color: var(--text-color);
-            padding: 1rem 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s, color 0.3s;
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+        .title {
+            font-size: 2.7rem;
+            font-weight: 700;
+            line-height: 1.2;
         }
 
-        nav ul li {
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .theme-toggle {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: var(--text-color);
+        .subtitle {
             font-size: 1.5rem;
+            opacity: 0.7;
+            min-height: 1.5em;
         }
 
-        main {
-            padding-top: 4rem;
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 4rem;
+            margin-bottom: 1rem;
         }
 
-        section {
-            padding: 5rem 2rem 2rem;
-            text-align: center;
+        .project-item, .skill-item {
+            border-top: 1px solid var(--text);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
         }
 
-        #portfolio .projects {
-            display: flex;
-            overflow-x: auto;
+        .project-item:hover, .skill-item:hover {
+            padding-left: 1rem;
+            background-color: rgba(128, 128, 128, 0.1);
+        }
+        
+        #contact a {
+          text-decoration: none;
         }
 
-        #portfolio .projects div {
-            margin: 1rem;
-            padding: 1rem;
-            border: 1px solid var(--accent-color);
-            min-width: 200px;
-            transition: transform 0.2s;
-            background-color: var(--secondary-bg-color);
+        .contact-link {
+            display: inline-block;
+            margin-right: 1rem;
+            text-decoration: underline;
+            transition: all 0.3s ease;
         }
 
-        #portfolio .projects div:hover {
-            transform: scale(1.1);
+        .contact-link:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        form input, form textarea {
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            width: 100%;
-            max-width: 500px;
-            background-color: var(--secondary-bg-color);
-            border: 1px solid var(--accent-color);
-            color: var(--text-color);
-        }
-
-        form button {
-            padding: 0.5rem 1rem;
-            background-color: var(--button-bg-color);
-            color: var(--button-text-color);
+        .theme-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--text);
+            color: var(--background);
             border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+            transition: all 0.3s ease;
         }
 
-        form button:hover {
-            background-color: var(--accent-color);
-            color: var(--button-text-color);
+        .theme-switch:hover {
+            opacity: 0.8;
         }
 
-        .fade-in {
+        .accent-text {
+            color: var(--accent);
+        }
+
+        .skill-bar {
+            height: 4px;
+            background-color: var(--accent);
+            margin-top: 5px;
+            transition: width 1s ease-in-out;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--accent);
+            color: var(--background);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
             opacity: 0;
-            animation: fadeIn 2s forwards;
+            transition: opacity 0.3s ease;
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .typewriter::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Icon styles */
+        .icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        
+        /* Style for the theme switch button */
+.theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--text);
+    color: var(--background);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 24px; /* Adjust size of icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-switch:hover {
+    background-color: var(--accent);
+    color: var(--background);
+    opacity: 0.8;
+}
+    </style>
+</head>
+<body class="antialiased">
+    <button class="theme-switch" onclick="toggleTheme()">
+    <span class="material-icons">brightness_6</span>
+</button>
+    <div class="content-wrapper">
+        <header class="mb-16">
+            <h2 class="title">Hi</h2>
+            <h3 class="title">I'm Akash</h3>
+            <p class="subtitle"><span class="accent-text typewriter" id="typewriter"></span></p>
+        </header>
+
+        <main>
+            <section id="about">
+                <p class="text-lg mb-8">I'm a passionate frontend developer with a keen interest in creating beautiful and functional web experiences. With a strong foundation in HTML, CSS, and JavaScript, I love bringing designs to life and optimizing user interactions.</p>
+            </section>
+
+            <section id="skills">
+                <h2 class="section-title">Skills</h2>
+                <div class="skill-item">
+                    <div><i class="fas fa-code"></i> HTML5 / CSS3</div>
+                    <div class="skill-bar" style="width: 0%;" data-width="95%"></div>
+                </div>
+                <div class="skill-item">
+                    <div><i class="fab fa-js"></i> JavaScript (ES6+)</div>
+                    <div class="skill-bar" style="width: 0%;" data-width="90%"></div>
+                </div>
+                <div class="skill-item">
+                    <div><i class="fab fa-react"></i> React.js</div>
+                    <div class="skill-bar" style="width: 0%;" data-width="85%"></div>
+                </div>
+                <div class="skill-item">
+                    <div><i class="fab fa-vuejs"></i> Vue.js</div>
+                    <div class="skill-bar" style="width: 0%;" data-width="80%"></div>
+                </div>
+                <div class="skill-item">
+                    <div><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+                    <div class="skill-bar" style="width: 0%;" data-width="95%"></div>
+                </div>
+                <div class="skill-item">
+                    <div><i class="fas fa-tachometer-alt"></i> Web Performance Optimization</div>
+                    <div class="skill-bar" style="width: 0%;" data-width="85%"></div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2 class="section-title">Selected Projects</h2>
+                <div class="project-item">
+                    <h3 class="text-xl font-bold"><img src="https://img.icons8.com/fluency/48/000000/ecommerce.png" alt="E-commerce" class="icon">E-commerce Platform</h3>
+                    <p>A fully responsive online store built with React and Next.js</p>
+                </div>
+                <div class="project-item">
+                    <h3 class="text-xl font-bold"><img src="https://img.icons8.com/external-flat-icons-vectorslab/64/000000/external-dashboard-data-science-flat-icons-vectorslab.png" alt="Dashboard" class="icon">Data Visualization Dashboard</h3>
+                    <p>Interactive charts and graphs using D3.js and Vue.js</p>
+                </div>
+                <div class="project-item">
+                    <h3 class="text-xl font-bold"><img src="https://img.icons8.com/fluency/48/000000/code.png" alt="Portfolio" class="icon">Portfolio Generator</h3>
+                    <p>A tool for developers to create custom portfolios using React and GraphQL</p>
+                </div>
+            </section>
+
+            <section id="contact" class="mt-16">
+    <h2 class="section-title">Get in Touch</h2>
+    <a href="mailto:akash.techie01@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+    <a href="https://github.com/iamakashtechie" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://linkedin.com/in/iamakashtechie" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://twitter.com/iamakashtechie" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fab fa-twitter"></i> Twitter</a>
+</section>
+        </main>
+
+        <footer class="mt-16 text-sm opacity-70">
+            <p>&copy; 2024 Akash. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <a href="#" class="back-to-top">↑</a>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        // Animate header
+        gsap.from("header", { opacity: 0, y: -50, duration: 1, ease: "power3.out" });
+
+        // Animate main sections
+        gsap.from("main section", { opacity: 0, y: 50, duration: 1, stagger: 0.2, ease: "power3.out" });
+
+        // Animate project and skill items
+        gsap.utils.toArray(".project-item, .skill-item").forEach(item => {
+            gsap.from(item, { 
+                opacity: 0, 
+                x: -20, 
+                duration: 0.5,
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%",
+                }
+            });
+        });
+
+        // Animate skill bars
+        gsap.utils.toArray(".skill-bar").forEach(bar => {
+            gsap.to(bar, { 
+                width: bar.dataset.width, 
+                duration: 1.5, 
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: bar,
+                    start: "top 80%",
+                }
+            });
+        });
+
+        // Back to top button functionality
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Typewriter effect
+        const typewriter = document.getElementById('typewriter');
+        const phrases = ['Frontend Developer', 'UI/UX Enthusiast', 'Tech Explorer'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWrite() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriter.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeWrite, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeWrite, 500);
+            } else {
+                setTimeout(typeWrite, isDeleting ? 50 : 100);
             }
         }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-info a {
-            color: var(--accent-color);
-            text-decoration: none;
-            margin-top: 0.5rem;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: var(--secondary-bg-color);
-            color: var(--text-color);
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .icon {
-            margin-right: 0.5rem;
-        }
-    </style>
-</head>
-<body data-theme="light">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about"><i class="fas fa-user icon"></i>About</a></li>
-                <li><a href="#portfolio"><i class="fas fa-briefcase icon"></i>Portfolio</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope icon"></i>Contact</a></li>
-            </ul>
-        </nav>
-        <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
-    </header>
-    <main>
-        <section id="about" class="fade-in">
-            <h1>About Me</h1>
-            <img src="https://media.giphy.com/media/3o7aD5tv1ogNBtDhDi/giphy.gif" alt="Coder GIF" style="width: 200px; border-radius: 50%;">
-            <p>I'm a passionate frontend developer with experience in creating dynamic and responsive websites...</p>
-        </section>
-        <section id="portfolio" class="fade-in">
-            <h1>Portfolio</h1>
-            <div class="projects">
-                <!-- Add your projects here -->
-                <div>
-                    <img src="https://via.placeholder.com/150" alt="Project 1">
-                    <p>Project 1</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/150" alt="Project 2">
-                    <p>Project 2</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/150" alt="Project 3">
-                    <p>Project 3</p>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="fade-in">
-            <h1>Contact</h1>
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <div class="contact-info">
-                <p>You can also find me on:</p>
-                <a href="https://github.com/iamakashtechie" target="_blank"><i class="fab fa-github icon"></i>GitHub</a>
-                <a href="https://linkedin.com/in/iamakashtechie" target="_blank"><i class="fab fa-linkedin icon"></i>LinkedIn</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 iamakashtechie</p>
-    </footer>
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            body.setAttribute('data-theme', newTheme);
-        }
-
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Add smooth fade-in effect on scroll
-        const sections = document.querySelectorAll('section');
-        const options = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                }
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
+        typeWrite();
     </script>
 </body>
 </html>
