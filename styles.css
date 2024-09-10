@@ -49,7 +49,6 @@
             // test
             z-index: 1;
             opacity: 1 !important;
-            transform: none !important;
             // test
             border-top: 1px solid var(--text);
             padding: 1rem 0;
