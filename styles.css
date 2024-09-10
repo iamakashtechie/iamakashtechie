@@ -46,7 +46,11 @@
         }
 
         .project-item, .skill-item {
+            // test
             z-index: 1;
+            opacity: 1 !important;
+            transform: none !important;
+            // test
             border-top: 1px solid var(--text);
             padding: 1rem 0;
             transition: all 0.3s ease;
