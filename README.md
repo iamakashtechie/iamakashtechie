@@ -1,77 +1,73 @@
 <h1 align="center">Hi 👋, I'm Akash Shaw</h1>
-<h3 align="center">A passionate frontend developer from India</h3>
+<h3 align="center">A passionate Frontend Developer from India</h3>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=iamakashtechie&label=Profile%20views&color=0e75b6&style=flat" alt="iamakashtechie" />
-  <br>
+  <img src="https://komarev.com/ghpvc/?username=iamakashtechie&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+</p>
+
+<p align="center">
   <a href="https://github.com/iamakashtechie" target="_blank">
-    <img src="https://img.shields.io/twitter/follow/iamakashtechie?logo=twitter&style=for-the-badge" alt="iamakashtechie" />
+    <img src="https://img.shields.io/github/followers/iamakashtechie?logo=github&style=for-the-badge" alt="GitHub followers" />
+  </a>
+  <a href="https://twitter.com/iamakashtechie" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/iamakashtechie?logo=twitter&style=for-the-badge" alt="Twitter followers" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/8b14f1c2-2727-41a0-bfb6-ba45beee0dc9/Group_59/w=828,quality=90,fit=scale-down" alt="coding gif" />
+  <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/8b14f1c2-2727-41a0-bfb6-ba45beee0dc9/Group_59/w=828,quality=90,fit=scale-down" alt="Coding GIF" width="80%" />
 </p>
 
-<hr>
+---
 
+### 🚀 About Me:
+- 🌱 Currently learning **Frontend Web Development**
+- 👯 Open to collaborate on **Web Development Projects**
+- 📫 Reach me at **[akash.techie01@gmail.com](mailto:akash.techie01@gmail.com)**
+
+---
+
+### 🔗 Connect with Me:
 <p align="left">
-  🌱 I’m currently learning <strong>Frontend web development</strong><br>
-  👯 I’m looking to collaborate on <strong>Web development projects</strong><br>
-  📫 How to reach me <a href="mailto:akash.techie01@gmail.com"><strong>akash.techie01@gmail.com</strong></a>
+  <a href="https://twitter.com/iamakashtechie" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg" alt="Twitter" width="40" height="40"/>
+  </a>
+  <a href="https://linkedin.com/in/iamakashtechie" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40"/>
+  </a>
+  <a href="https://instagram.com/iamakashtechie" target="_blank">
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" width="40" height="40"/>
+  </a>
 </p>
 
-<h3 align="left">Connect with me:</h3>
+---
+
+### 🛠️ Languages & Tools:
 <p align="left">
-  <a href="https://twitter.com/iamakashtechie" target="blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg" alt="iamakashtechie" height="30" width="40" /></a>
-  <a href="https://linkedin.com/in/iamakashtechie" target="blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg" alt="iamakashtechie" height="30" width="40" /></a>
-  <a href="https://instagram.com/iamakashtechie" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="iamakashtechie" height="30" width="40" /></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain.svg" alt="HTML5" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg" alt="CSS3" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express.js" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongoose/mongoose-original.svg" alt="Mongoose" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-plain.svg" alt="Git" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-line.svg" alt="C" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" width="40" height="40"/>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left">
-  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain.svg" alt="html5" width="40" height="40"/> 
-  </a>
-  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg" alt="css3" width="40" height="40"/> 
-  </a>
-  <a href="https://www.w3schools.com/js/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="css3" width="40" height="40"/> 
-  </a>
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-plain.svg" alt="git" width="40" height="40"/> 
-  </a>
-  <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-line.svg" alt="c" width="40" height="40"/> 
-  </a>
-  <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-plain.svg" alt="cplusplus" width="40" height="40"/> 
-  </a>
-  <a href="https://www.java.com" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> 
-  </a>
-  <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> 
-  </a>
-</p>
+---
 
-<div>
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=iamakashtechie&show_icons=true&locale=en&layout=compact&theme=transparent" alt="iamakashtechie" />
+### 📊 GitHub Stats:
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=iamakashtechie&show_icons=true&locale=en&layout=compact&theme=transparent" alt="Top Languages" />
+  <br><br>
+  <img src="https://github-readme-stats.vercel.app/api?username=iamakashtechie&show_icons=true&locale=en&theme=transparent" alt="GitHub Stats" />
+  <br><br>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamakashtechie&theme=cobalt" alt="GitHub Streak" />
 </div>
 
-<br>
+---
 
-<div>&nbsp;
-  <img align="left" src="https://github-readme-stats.vercel.app/api?username=iamakashtechie&show_icons=true&locale=en&theme=transparent" alt="iamakashtechie" />
-</div>
-
-<br>
-
-<div>
-  <img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=iamakashtechie&theme=cobalt" alt="iamakashtechie" />
-</div>
-
-<!-- <div>
-   <img align="left" src="https://github-readme-stats.vercel.app/api?username=iamakashtechie)](https://github.com/iamakashtechie/github-readme-stats" />
-</div> -->
+### 🎯 Fun Fact:
+💡 "Building beautiful UI with minimal design and smooth animations is my thing!"
