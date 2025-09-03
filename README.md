@@ -70,4 +70,4 @@
 ---
 
 ### 🎯 Fun Fact:
-💡 "Building beautiful UI with minimal design and smooth animations is my thing!"
+🚀 I’m a frontend-leaning engineer from Civil at IIEST who learns by shipping 📦, cares about clean UX 🎨 and motion 🎬, and is actively leveling up DSA 📚 and systems skills ⚙️ to build useful products 🌍 — especially around space 🛰️, sustainability 🌱, and data visualization 📊.
