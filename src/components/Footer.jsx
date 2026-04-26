@@ -14,7 +14,7 @@ const Footer = () => {
     { name: 'LinkedIn', url: 'https://linkedin.com/in/iamakashtechie' },
     { name: 'Github', url: 'https://github.com/iamakashtechie' },
     { name: 'Instagram', url: 'https://instagram.com/iamakashtechie' },
-    { name: 'Resume', url: 'https://drive.google.com/file/d/1WyYlluEEep_gzqOp2Axty7VIe9920jhO/view?usp=drive_link' },
+    { name: 'Resume', url: 'https://drive.google.com/file/d/11_wRHS9bpGa2SJ3n9GIDY3AIbfF7EI8j/view' },
   ];
 
   return (
