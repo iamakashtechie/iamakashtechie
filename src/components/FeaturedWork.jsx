@@ -8,44 +8,71 @@ const FeaturedWork = () => {
   const workRefs = useRef([]);
 
   const works = [
-    { 
-      title: "Kriti", 
-      tag: "Cultural Fest Website", 
-      year: "2024", 
-      img: "/works/kriti.png",
-      description: "Developed the landing page of Kriti with our team.",
-      tech: "React, HTML, CSS",
-      url: "https://github.com/DugarRishab/kriti"
+    {
+      title: "Nexus",
+      tag: "Full-Stack Notes PWA",
+      year: "2026",
+      img: "/works/nexus.png",
+      description: "Self-hosted personal knowledge base as a Progressive Web App — dual editor modes, Mermaid diagrams, JWT auth, and export to PDF/ZIP.",
+      tech: "Next.js · TypeScript · Prisma · Neon PostgreSQL",
+      url: "https://github.com/iamakashtechie/Nexus"
     },
-    { 
-      title: "JanVaani", 
-      tag: "Civic Tech Platform", 
-      year: "2024", 
+    {
+      title: "ClipSync",
+      tag: "Offline Desktop + Android App",
+      year: "2026",
+      img: "/works/clipsync.png",
+      description: "Fully offline clipboard sync between Windows 11 and Android over local Wi-Fi — no internet, no cloud, no relay. Custom TCP protocol.",
+      tech: "Tauri · Rust · React · Kotlin",
+      url: "https://github.com/iamakashtechie/ClipSync"
+    },
+    {
+      title: "Students' Senate",
+      tag: "Institutional Website",
+      year: "2026",
+      img: "/works/students-senate.png",
+      description: "Official website of the Students' Senate, IIEST Shibpur — with admin panel, notification system, and member management.",
+      tech: "Next.js · Tailwind CSS · JavaScript",
+      url: "https://github.com/iamakashtechie/students-senate"
+    },
+    {
+      title: "NidhiRakshak",
+      tag: "Banking Security App · Hackathon Finalist",
+      year: "2025",
+      img: "/works/nidhi-rakshak.png",
+      description: "RBI/NPCI-compliant banking security app with real-time device risk analysis and suspicious app scanning. Finalist at IIEST UCO Bank Hackathon 2025.",
+      tech: "Flutter · Dart · Firebase",
+      url: "https://github.com/iamakashtechie/NidhiRakshak"
+    },
+    {
+      title: "JanVaani",
+      tag: "Civic Tech Platform",
+      year: "2024",
       img: "/works/jan-vaani.png",
-      description: "JanVaani facilitates collaborative problem-solving for civic issues by bridging the communication gap between residents and local government.",
-      tech: "React, Node.js, Express.js, Firebase",
+      description: "Civic-tech platform enabling residents to collaboratively submit and upvote local issues, with real-time status tracking for local government response.",
+      tech: "React · Node.js · Express.js · Firebase",
       url: "https://janvaani.vercel.app/login"
     },
-    { 
-      title: "NidhiRakshak", 
-      tag: "Banking Security App", 
-      year: "2024", 
-      img: "/works/nidhi-rakshak.png",
-      description: "A Flutter-based banking security app ensuring RBI/NPCI compliance through device and app risk analysis.",
-      tech: "Flutter",
-      url: "https://github.com/Light-700/Nidhi-Rakshak"
+    {
+      title: "Kriti",
+      tag: "Cultural Fest Website",
+      year: "2024",
+      img: "/works/kriti.png",
+      description: "Landing page for Kriti — the annual cultural fest of SCAGE, IIEST Shibpur. Built collaboratively with the CodeIIEST team.",
+      tech: "React · HTML · CSS",
+      url: "https://github.com/DugarRishab/kriti"
     },
     { 
       title: "Portfolio Website", 
       tag: "Personal Portfolio", 
-      year: "2023", 
+      year: "2026", 
       img: "/works/portfolio-website.png",
       description: "Minimal themed website.",
       tech: "HTML, CSS, JS",
       url: "https://iamakashtechie.vercel.app/"
     }
   ];
-
+  
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
     

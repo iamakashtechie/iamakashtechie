@@ -1,39 +1,39 @@
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ArrowRight, MapPin } from "lucide-react";
 
 const Hero = () => {
   const containerRef = useRef(null);
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      tl.to('.grid-line-hor, .grid-line-ver', {
+      tl.to(".grid-line-hor, .grid-line-ver", {
         scaleX: 1,
         scaleY: 1,
         opacity: 1,
         duration: 1.5,
         stagger: 0.1,
-        ease: 'expo.out',
+        ease: "expo.out",
       });
 
       tl.fromTo(
-        '.hero-content',
+        ".hero-content",
         { opacity: 0, y: 10 },
         { opacity: 1, y: 0, duration: 1, stagger: 0.05 },
-        '-=1'
+        "-=1",
       );
 
       tl.fromTo(
-        '.cta-bg',
+        ".cta-bg",
         { scaleX: 0 },
-        { scaleX: 1, duration: 0.8, ease: 'expo.out' },
-        '-=0.6'
+        { scaleX: 1, duration: 0.8, ease: "expo.out" },
+        "-=0.6",
       );
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
@@ -55,8 +55,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="col-span-1 md:col-span-3 h-[60px] md:h-[80px] p-6 hidden md:flex items-center justify-start z-10">
-        </div>
+        <div className="col-span-1 md:col-span-3 h-[60px] md:h-[80px] p-6 hidden md:flex items-center justify-start z-10"></div>
 
         <div className="col-span-1 md:col-span-3 h-[80px] hidden md:block z-10"></div>
 
@@ -87,15 +86,15 @@ const Hero = () => {
             className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]"
             style={{
               backgroundImage:
-                'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
-              backgroundSize: '40px 40px',
+                "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
             }}
           ></div>
           <div
             className="absolute inset-0 z-0 pointer-events-none opacity-[0.05]"
             style={{
               backgroundImage:
-                'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")'
+                "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
             }}
           ></div>
         </div>
@@ -110,11 +109,17 @@ const Hero = () => {
             <div className="flex gap-3 text-gray-500 font-mono text-[10px] md:text-xs mt-4 uppercase tracking-wider items-center">
               <span>React</span>
               <span>/</span>
-              <span>GSAP</span>
+              <span>Next.js</span>
+              <span>/</span>
+              <span>TypeScript</span>
+              <span>/</span>
+              <span>Tauri</span>
               <span>/</span>
               <span>Node.js</span>
               <span>/</span>
-              <span>Figma</span>
+              <span>FIGMA</span>
+              <span>/</span>
+              <span>GSAP</span>
             </div>
           </div>
         </div>
@@ -122,7 +127,9 @@ const Hero = () => {
         <div
           className="col-span-2 md:col-span-3 h-[80px] md:h-[140px] relative group overflow-hidden cursor-pointer border-t border-white/10 z-10"
           onClick={() =>
-            document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' })
+            document
+              .getElementById("works")
+              ?.scrollIntoView({ behavior: "smooth" })
           }
         >
           <div className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-0" />
