@@ -151,7 +151,7 @@ const CustomCursor = () => {
           }
         }
       } catch (err) {
-        // safe guard: ignore errors from elementFromPoint in some environments
+        console.log(err);
       }
     };
 
@@ -180,7 +180,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 rounded-full pointer-events-none z-[9999] flex items-center justify-center bg-white mix-blend-exclusion"
+      className="fixed top-0 left-0 rounded-full pointer-events-none z-9999 flex items-center justify-center bg-white mix-blend-exclusion"
       style={{ width: '12px', height: '12px' }}
     >
       <span 

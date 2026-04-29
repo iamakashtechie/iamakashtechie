@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 const Loader = () => {
-  const containerRef = useRef(null);
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -23,7 +22,7 @@ const Loader = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-dark">
+    <div className="fixed inset-0 z-100 flex items-center justify-center bg-brand-dark">
       <h1 ref={textRef} className="font-gothic text-4xl md:text-6xl text-brand-light tracking-widest">
         AKASH
       </h1>

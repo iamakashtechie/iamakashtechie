@@ -35,7 +35,7 @@ const SmoothScroll = ({ children }) => {
         mouseMultiplier: 1,
         smoothTouch: true,
         touchMultiplier: 1.5,
-        touchInertiaMultiplier: 20,
+        touchInertiaMultiplier: 8,
         infinite: false,
       }}
     >

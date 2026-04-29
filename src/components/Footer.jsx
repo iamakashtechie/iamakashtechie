@@ -20,13 +20,13 @@ const Footer = () => {
   return (
     <footer id='footer' className="relative w-full h-screen bg-brand-dark text-brand-light px-6 md:px-12 pb-8 pt-20 overflow-hidden border-t border-brand-light/10 flex flex-col justify-between">
 
-      <div className="flex-grow flex items-center justify-center">
+      <div className="grow flex items-center justify-center">
         <h1 className="font-gothic font-bold text-[15vw] leading-none tracking-tighter text-brand-light select-none text-center opacity-[0.1]">
           LET'S TALK
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 pb-10 max-w-[1800px] mx-auto w-full z-10">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 pb-10 max-w-450 mx-auto w-full z-10">
 
         <div className="md:col-span-6 flex flex-col justify-end">
           <div className="max-w-md">
@@ -68,8 +68,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-[1800px] mx-auto z-10">
-        <div className="w-full h-[1px] bg-brand-light/10 mb-6"></div>
+      <div className="w-full max-w-450 mx-auto z-10">
+        <div className="w-full h-px bg-brand-light/10 mb-6"></div>
         <p className="text-xs text-brand-light/50 uppercase tracking-wider font-mono text-center">
           Copyright © 2026 iamakashtechie, All Rights Reserved.
         </p>

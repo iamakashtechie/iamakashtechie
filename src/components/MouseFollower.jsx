@@ -83,7 +83,7 @@ const MouseFollower = () => {
   return (
     <div
       ref={followerRef}
-      className="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[100] mix-blend-difference hidden md:flex items-center justify-center"
+      className="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-100 mix-blend-difference hidden md:flex items-center justify-center"
     >
       <span ref={textRef} className="text-black font-bold text-[10px] opacity-0 pointer-events-none absolute font-mono"></span>
     </div>

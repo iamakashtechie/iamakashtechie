@@ -2,14 +2,14 @@ import React from 'react';
 
 const Methodology = () => {
   const methodologies = [
-    { head: "Observe", desc: "Most problems are misunderstood before they're solved. I try not to rush that part." },
-    { head: "Design", desc: "If something doesn't make the experience better, it probably shouldn't be there." },
-    { head: "Refine", desc: "The first version is rarely right. Iteration is where things actually improve." }
+    { head: "Build to Learn", desc: "I don't wait to fully understand something before starting. Building it is how I understand it — AFSK modems, P2P systems, offline apps. Curiosity drives the first commit." },
+    { head: "Ship Early", desc: "A working thing beats a perfect plan. I bias towards getting something real out the door — then I see what's actually broken, missing, or worth improving." },
+    { head: "Obsess Later", desc: "Once it works, I go back. The details — performance, edge cases, design polish — that's where the real craft is. Shipping isn't the end, it's the start of the real work." }
   ];
 
   return (
     <section id="methodology" className="bg-brand-dark-2 reveal-section border-b border-white/10">
-      <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-12">
+      <div className="max-w-450 mx-auto grid grid-cols-1 md:grid-cols-12">
         <div className="md:col-span-3 p-6 md:p-10 border-r border-white/10">
           <div className="text-xs font-mono text-brand-accent uppercase tracking-widest sticky top-32">
             ( 04 — How I Work )

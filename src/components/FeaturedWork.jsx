@@ -42,7 +42,7 @@ const FeaturedWork = () => {
       img: "/works/nidhi-rakshak.png",
       description: "RBI/NPCI-compliant banking security app with real-time device risk analysis and suspicious app scanning. Finalist at IIEST UCO Bank Hackathon 2025.",
       tech: "Flutter · Dart · Firebase",
-      url: "https://github.com/iamakashtechie/NidhiRakshak"
+      url: "https://github.com/iamakashtechie/Nidhi-Rakshak"
     },
     {
       title: "JanVaani",
@@ -61,26 +61,17 @@ const FeaturedWork = () => {
       description: "Landing page for Kriti — the annual cultural fest of SCAGE, IIEST Shibpur. Built collaboratively with the CodeIIEST team.",
       tech: "React · HTML · CSS",
       url: "https://github.com/DugarRishab/kriti"
-    },
-    { 
-      title: "Portfolio Website", 
-      tag: "Personal Portfolio", 
-      year: "2026", 
-      img: "/works/portfolio-website.png",
-      description: "Minimal themed website.",
-      tech: "HTML, CSS, JS",
-      url: "https://iamakashtechie.vercel.app/"
     }
   ];
-  
+
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
-    
+    const triggers = [];
+
     if (isMobile) {
       workRefs.current.forEach((work) => {
         if (!work) return;
-
-        ScrollTrigger.create({
+        const trigger = ScrollTrigger.create({
           trigger: work,
           start: 'top 80%',
           end: 'top 10%',
@@ -89,17 +80,18 @@ const FeaturedWork = () => {
           onEnterBack: () => work.classList.add('active'),
           onLeaveBack: () => work.classList.remove('active'),
         });
+        triggers.push(trigger);
       });
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      triggers.forEach(t => t.kill());
     };
   }, []);
 
   return (
     <section id="works" className="bg-brand-dark relative z-10 w-full reveal-section border-b border-white/10">
-      <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-12">
+      <div className="max-w-450 mx-auto grid grid-cols-1 md:grid-cols-12">
         <div className="md:col-span-3 p-6 md:p-10 border-r border-white/10 flex items-start">
           <div className="text-xs font-mono text-gray-500 uppercase tracking-widest sticky top-32">
             ( 03 — My Works )
@@ -117,11 +109,11 @@ const FeaturedWork = () => {
                 ref={(el) => (workRefs.current[index] = el)}
                 className="work-item group border-b hover:bg-brand-dark-2 border-white/10 last:border-b-0 p-6 md:p-16 flex flex-col md:flex-row items-center gap-10 transition-colors duration-500 relative overflow-hidden"
               >
-                <div className="w-full md:w-auto text-xs font-mono text-gray-500 uppercase tracking-widest md:absolute md:top-16 md:left-10">
-                  {work.year} — 0{index + 1}
+                <div className="w-full md:w-auto text-xs font-mono text-gray-500 uppercase tracking-widest md:absolute md:top-8 md:left-16 z-10">
+                  {work.year}
                 </div>
 
-                <div className="work-image w-full md:w-[240px] h-[140px] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div className="work-image w-full md:w-60 h-35 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
                   <img src={work.img} alt={work.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                 </div>
 

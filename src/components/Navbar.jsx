@@ -53,17 +53,14 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const links = [
-    { name: 'Work', path: '/works', external: false },
-    { name: 'About', path: '/about', external: false },
-    { name: 'Contact', path: 'mailto:iamakashtechie@gmail.com', external: true },
-    { name: 'Blog', path: '/blog', external: false },
+    { name: 'Contact', path: 'mailto:akash.techie01@gmail.com', external: true },
   ];
 
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://linkedin.com/in/iamakashtechie' },
     { name: 'Github', url: 'https://github.com/iamakashtechie' },
     { name: 'Instagram', url: 'https://instagram.com/iamakashtechie' },
-    { name: 'Resume', url: '#' },
+    { name: 'Resume', url: 'https://iamakashtechie.is-a.dev/resume' },
   ];
 
   return (

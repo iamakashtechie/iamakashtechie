@@ -10,7 +10,7 @@ const WhatIDo = () => {
   useLayoutEffect(() => {
     if (textRef.current) {
       const chars = textRef.current.querySelectorAll('.reveal-char');
-      gsap.fromTo(chars,
+      const anim = gsap.fromTo(chars,
         { opacity: 0.1 },
         {
           opacity: 1,
@@ -24,11 +24,12 @@ const WhatIDo = () => {
           }
         }
       );
-    }
 
-    return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    };
+      return () => {
+        anim.scrollTrigger?.kill();
+        anim.kill();
+      };
+    }
   }, []);
 
   const splitText = (text) => {
@@ -41,7 +42,7 @@ const WhatIDo = () => {
 
   return (
     <section id="what-i-do" className="border-b bg-brand-dark border-white/10 reveal-section">
-      <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-12 min-h-[50vh]">
+      <div className="max-w-450 mx-auto grid grid-cols-1 md:grid-cols-12 min-h-[50vh]">
         <div className="md:col-span-3 p-6 md:p-10 border-r border-white/10 flex items-start">
           <div className="text-xs font-mono text-gray-500 uppercase tracking-widest sticky top-32">
             ( 01 — What I do )
@@ -49,10 +50,10 @@ const WhatIDo = () => {
         </div>
         <div className="md:col-span-9 p-6 md:p-20 flex flex-col justify-center space-y-10">
           <h2 ref={textRef} className="text-4xl md:text-7xl font-sans font-bold leading-[1.05] tracking-tight">
-            {splitText("I build things that focus on how they ")}
-            <span className="text-brand-accent">{splitText("feel,")}</span>
-            {splitText(" not just how they ")}
-            <span className="italic font-gothic text-gray-400">{splitText("work.")}</span>
+            {splitText("I ship across the ")}
+            <span className="text-brand-accent">{splitText("full stack ‒")}</span>
+            {splitText(" web, mobile, and desktop. From ")}
+            <span className="italic font-gothic text-gray-400">{splitText("React to Rust.")}</span>
           </h2>
         </div>
       </div>

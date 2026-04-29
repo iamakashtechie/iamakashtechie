@@ -43,10 +43,10 @@ const Hero = () => {
       className="relative h-dvh w-full bg-brand-dark flex flex-col justify-center items-center py-4 px-4 md:px-10 overflow-hidden"
     >
       {/* Main Grid Container */}
-      <div className="relative w-full max-w-[1600px] h-full max-h-[90vh] md:max-h-[800px] grid grid-cols-2 md:grid-cols-12 grid-rows-[auto_1fr_auto] border border-white/10">
-        <div className="grid-line-hor absolute top-[60px] md:top-[80px] left-0 w-full h-px bg-white/10 origin-left scale-x-0 opacity-0 z-0" />
+      <div className="relative w-full max-w-400 h-full max-h-[90vh] md:max-h-200 grid grid-cols-2 md:grid-cols-12 grid-rows-[auto_1fr_auto] border border-white/10">
+        <div className="grid-line-hor absolute top-15 md:top-20 left-0 w-full h-px bg-white/10 origin-left scale-x-0 opacity-0 z-0" />
 
-        <div className="col-span-1 md:col-span-3 h-[60px] md:h-[80px] p-4 md:p-6 flex items-center border-b md:border-b-0 border-white/10 relative z-10">
+        <div className="col-span-1 md:col-span-3 h-15 md:h-20 p-4 md:p-6 flex items-center border-b md:border-b-0 border-white/10 relative z-10">
           <div className="hero-content flex items-center gap-3">
             <div className="w-2 h-2 bg-white rounded-full"></div>
             <span className="font-gothic text-sm uppercase tracking-widest text-white font-bold">
@@ -55,11 +55,11 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="col-span-1 md:col-span-3 h-[60px] md:h-[80px] p-6 hidden md:flex items-center justify-start z-10"></div>
+        <div className="col-span-1 md:col-span-3 h-15 md:h-20 p-6 hidden md:flex items-center justify-start z-10"></div>
 
-        <div className="col-span-1 md:col-span-3 h-[80px] hidden md:block z-10"></div>
+        <div className="col-span-1 md:col-span-3 h-20 hidden md:block z-10"></div>
 
-        <div className="col-span-1 md:col-span-3 h-[60px] md:h-[80px] p-4 md:p-6 flex items-center justify-end relative z-10">
+        <div className="col-span-1 md:col-span-3 h-15 md:h-20 p-4 md:p-6 flex items-center justify-end relative z-10">
           <div className="hero-content flex items-center gap-2">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -99,14 +99,14 @@ const Hero = () => {
           ></div>
         </div>
 
-        <div className="col-span-2 md:col-span-9 h-auto md:h-[140px] p-6 md:p-8 flex items-center border-t border-white/10 border-r-0 md:border-r z-10">
+        <div className="col-span-2 md:col-span-9 h-auto md:h-35 p-6 md:p-8 flex items-center border-t border-white/10 border-r-0 md:border-r z-10">
           <div className="hero-content w-full">
             <p className="text-gray-400 text-sm md:text-base font-light leading-relaxed max-w-md">
               Frontend-focused full-stack developer working with UI, motion, and
               backend systems.
             </p>
 
-            <div className="flex gap-3 text-gray-500 font-mono text-[10px] md:text-xs mt-4 uppercase tracking-wider items-center">
+            <div className="flex flex-wrap gap-3 text-gray-500 font-mono text-[10px] md:text-xs mt-4 uppercase tracking-wider items-center">
               <span>React</span>
               <span>/</span>
               <span>Next.js</span>
@@ -125,7 +125,7 @@ const Hero = () => {
         </div>
 
         <div
-          className="col-span-2 md:col-span-3 h-[80px] md:h-[140px] relative group overflow-hidden cursor-pointer border-t border-white/10 z-10"
+          className="col-span-2 md:col-span-3 h-20 md:h-35 relative group overflow-hidden cursor-pointer border-t border-white/10 z-10"
           onClick={() =>
             document
               .getElementById("works")
